@@ -45,8 +45,8 @@ with open(budget_csv) as csvfile:
     print(f"Total Months: {totalMonths}")
     print(f"Total: ${totalProfit}")
     print(f"Average Change: {avgChange}")
-    print(f"Greatest Increase in Profits: {maxChange_date} (${maxChange}) ")
-    print(f"Greatest Decrease: {minChange_date} (${minChange})")
+    print(f"Greatest Increase in Profits: {maxChange_date} (${maxChange})")
+    print(f"Greatest Decrease in Profits: {minChange_date} (${minChange})")
 
     #write results in text file
     #specify text file path
@@ -56,6 +56,10 @@ with open(budget_csv) as csvfile:
     with open(output_path, "w") as txtfile:
 
         #Write headers
-        txtfile.write("Financial Analysis")
-        txtfile.write("-------------------------")
-        txtfile.write("")
+        txtfile.write("Financial Analysis\n")
+        txtfile.write("-------------------------\n")
+        txtfile.write(f"Total Months: {totalMonths}\n")
+        txtfile.write(f"Total: ${totalProfit}\n")
+        txtfile.write(f"Average Change: {avgChange}\n")
+        txtfile.write(f"Greatest Increase in Profits: {maxChange_date} (${maxChange})\n")
+        txtfile.write(f"Greatest Decrease in Profits: {minChange_date} (${minChange})\n")
